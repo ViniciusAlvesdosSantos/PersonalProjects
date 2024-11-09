@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee & Finances</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="topHeader">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;<nav id="sanduiche-menu">
+        <p></p>
+        <a href="#">Home</a>
+        <a href="#">Sobre Nós</a>
+    </nav></div>
+        <div class="site-title">Coffee & Finances</div>
+        <div class="login-register">
+            <a href="#">Login / Registre-se</a>
+            <div class="user-icon"><i class='bx bxs-user'></i></div>
+        </div>
+    </header>
+
+    
+
+    <script src="script.js"></script>
+
+
+    <section class="firstSection">
+            <div class="textImg">
+                <div class="textSection1">
+                    <h1 id="headerFirstSection">
+                        Coffee & <br>
+                        Finances
+                    </h1>
+                    <p id="text1">
+                        Aprenda sobre finanças <br>
+                        com livros que <br>
+                        mudam vidas <br>
+                        até hoje 
+                    </p>
+                </div>   
+                    <button onclick="" class="btn-sct1">
+                        <a href="#">
+                            Fazer login
+                        </a>
+                    </button>
+            </div>       
+            
+    </section>
+    <section class="secondSection">
+        <div class="textImg2">
+            <div class="imgSection2">
+                <img src="../PersonalProjects/imagens/finance-elements-assortment-with-empty-notepad.jpg" id="imgFinances">
+            </div>
+            <div class="text2">
+                <h2>Finanças descomplicadas <br>
+                    para uma vida com <br>
+                    menos preocupações</h2>
+                <p>
+                    O Coffee & Finances mostra como o conhecimento <br>
+                    financeiro é essencial para alcançar segurança <br>
+                    e liberdade. Com base em livros e práticas acessíveis <br>
+                    O site ajuda a transformar sua relação <br>
+                    com o dinheiro para decisões mais conscientes <br> 
+                    e uma vida mais tranquila. <br>
+                </p>
+            </div>
+        </div>
+        
+    </section>
+    <section class="thirdSection">
+        <div class="textImg3">
+            <h1>
+                Quais os objetivos do
+                Coffee & Finances ?
+            </h1>
+            <div class="text3">
+                <div class="bx1">
+                    <img src="../PersonalProjects/imagens/book-open-regular-60.png" id="imgSection3">
+                    <p>Estimulo à leitura</p>
+                    <span>
+                        Nós acreditamos que o estímulo à leitura é o maior ativo que podemos possuir
+                    </span>
+                </div>
+                <div class="bx2">
+                    <img src="../PersonalProjects/imagens/trending-up-regular-60.png" id="imgSection3">
+                    <p>Crescimento <br> pessoal</p>
+                    <span>
+                        Com o conhecimento de como o dinheiro funciona uma liberdade tanto quanto financeira quando pessoal cresce exponencialmente
+                    </span>
+                </div>
+                <div class="bx3">
+                    <img src="../PersonalProjects/imagens/money-regular-60.png" id="imgSection3">
+                    <p>Finanças</p>
+                    <span>
+                        Aprender finanças pessoais é essencial para garantir estabilidade financeira e alcançar objetivos a longo prazo.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fourthSection">
+        <div class="text4-1">
+            <p>O livro que me inspirou em realizar esse trabalho</p>
+        </div>
+        <img src="../PersonalProjects/imagens/psicologiaFinanceira.jpg">
+        <div class="text4">
+            <p>Este livro oferece lições valiosas sobre como lidar 
+                com dinheiro, fortuna e felicidade, e me ajudou a 
+                entender melhor a relação entre psicologia e finanças.</p>
+        </div>
+        
+    </section>
+
+    <section class="fifthSection">
+        <p>Quer conhecer mais sobre a <br>
+            Coffee & Finances ?</p>
+
+        <button> 
+            <a href="#">
+                Clique aqui 
+            </a>
+        </button>
+    </section>
+    
+    <footer class="footer"> 
+        <div class="leftFooter"> 
+            <ul> 
+                <li><a href="#">Home</a>
+                </li> <li><a href="#">Sobre nós</a>
+                </li> <li><a href="#">Quadro Kanban</a>
+                </li> </ul> 
+            </div> 
+            <div class="middleFooter"> 
+                    <p>Coffee & Finances</p> 
+                    <img src="../PersonalProjects/imagens/coffee-alt-solid-60.png" alt="Coffee">
+                    <p>© 2024 Coffee & Finances</p> 
+            </div> 
+            <div class="rightFooter"> 
+                <div class="left"> 
+                    <div class="social-item"> 
+                        <img src="../PersonalProjects/imagens/instagram-alt-logo-60.png" alt="Instagram"> 
+                        <a href="" class="leftText">Instagram</a> 
+                    </div> 
+                    <div class="social-item"> 
+                        <img src="../PersonalProjects/imagens/facebook-square-logo-60.png" alt="Facebook"> 
+                        <a href="" class="leftText">Facebook</a> 
+                    </div> 
+                    <div class="social-item"> 
+                        <img src="../PersonalProjects/imagens/linkedin-square-logo-60.png" alt="LinkedIn"> 
+                        <a href="" class="leftText">LinkedIn</a> 
+                    </div> 
+                </div> 
+            </div>
+    </footer>
+    </body>
+</html>
+
+
+<script>
+    function toggleMenu() {
+    const menu = document.getElementById('sanduiche-menu');
+    if (menu.style.display === 'none' || menu.style.display === '') {
+        menu.style.display = 'flex';
+    } else {
+        menu.style.display = 'none';
+    }
+}
+
+</script>
