@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Login</title>
+    <script src="script.js"></script>
 </head>
 <body>
+    
     <header>
         <h1>Coffee & Finances</h1>
     </header>
     <div class="login-container">
         <div class="image-section">
-            <img src="../PersonalProjects/imagens/Coffe&Finances.png" alt="Imagem" class="background-image">
+            <img src="../imagens/Coffe&Finances.png" alt="Imagem" class="background-image">
         </div>
-        <div class="form-section">
+        <div class="form-section-login">
             <h1>Entre na sua conta</h1>
             <form>
                 <label for="username">Login</label>
                 <input type="text" id="username" name="username" required placeholder="Insira seu nome de usuário">
                 
                 <label for="password">Senha</label>
-                <input type="password" id="password" name="password" required placeholder="SENHA">
+                <input type="password" id="password" name="password" required placeholder="Senha">
                 
-                <button type="submit" class="sign-in-button">LOGIN</button>
+                <button type="submit" class="sign-in-button">Login</button>
             </form>
             <p>Não tem uma conta? <a href="#" class="sign-up-link">Cadastre-se</a></p>
         </div>
@@ -33,25 +34,30 @@
                 <label for="username">Nome de usuário</label>
                 <input type="text" id="username" name="username" required placeholder="Nome de usuário">
                 <label for="email">Email</label>
-                <input type="text" id="email" name="email" required placeholder="Email">
+                <input type="email" id="email" name="email" required placeholder="Email">
                 <label for="password">Senha</label>
                 <input type="password" id="password" name="password" required placeholder="Insira sua senha">
-                <label for="password">Confirmar senha</label>
-                <input type="password" id="confirmPassword" name="password" required placeholder="Digite sua senha novamente">
+                <label for="confirmPassword">Confirmar senha</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Digite sua senha novamente">
                 
                 <button type="submit" class="sign-up-button">Registrar-se</button>
             </form>
-            <p>Não tem uma conta? <a href="#" class="sign-up-link">Cadastre-se</a></p>
+            <p>Já tem uma conta? <a href="#" class="log-in-link">Login</a></p>
         </div>
     </div>
 
-    <script>
-        document.querySelector('#password') 
-    </script>
+    
 </body>
 </html>
 <style>
-    body {
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -85,7 +91,7 @@
     
 }
 
-.form-section {
+.form-section-login, .form-section-register {
     flex: 1;
     padding: 40px;
     display: flex;
@@ -117,7 +123,7 @@ input {
     font-size: 14px;
 }
 
-.sign-in-button {
+.sign-in-button, .sign-up-button {
     padding: 10px;
     border: none;
     border-radius: 4px;
@@ -133,15 +139,18 @@ input {
 }
 
 .forgot-link,
-.sign-up-link {
-    color: #007bff;
+.sign-up-link, .log-in-link{
+    color: #000000;
+    font-weight: 700;
     text-decoration: none;
     font-size: 14px;
     text-align: center;
 }
 
 .forgot-link:hover,
-.sign-up-link:hover {
+.sign-up-link:hover, 
+.log-in-link:hover {
+    color: #218838;
     text-decoration: underline;
 }
 
@@ -151,3 +160,20 @@ p {
 }
 
 </style>
+
+<script>
+    const registerLink = document.querySelector('.sign-up-link');
+    const loginLink = document.querySelector('.log-in-link');
+    const formRegistro = document.querySelector('.form-section-register');
+    const formLogin = document.querySelector('.form-section-login');
+
+    registerLink.addEventListener('click', () => {
+        formLogin.style.display = 'none';
+        formRegistro.style.display = 'block';
+    });
+
+    loginLink.addEventListener('click', () => {
+        formRegistro.style.display = 'none';
+        formLogin.style.display = 'block';
+    });
+</script>
